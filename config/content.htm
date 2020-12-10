@@ -1,1 +1,120 @@
-<h1>About</h1><p>This is <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></p><p>目前的 cmsimde 在編輯器下方新增一個 csave 按鈕, 意即 collabrative save, 當動態網際管理系統在多人同時維護登入維護網頁內容時, 編輯各頁面時段, 該頁面可能已經改版, 因此使用 csave 按鈕存檔時, 會導入當下最新的該頁面內容, 並試圖與編輯中的頁面內容進行合併.</p><p>使用 csave 按鈕存檔無法刪除頁面資料.</p><p>使用 Edit All 模式, 無法使用 csave 按鈕（尚未測試).</p><p></p><p></p>
+<h1>About</h1>
+<p>This is <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></p>
+<p>目前的 cmsimde 在編輯器下方新增一個 csave 按鈕, 意即 collabrative save, 當動態網際管理系統在多人同時維護登入維護網頁內容時, 編輯各頁面時段, 該頁面可能已經改版, 因此使用 csave 按鈕存檔時, 會導入當下最新的該頁面內容, 並試圖與編輯中的頁面內容進行合併.</p>
+<p>使用 csave 按鈕存檔無法刪除頁面資料.</p>
+<p>使用 Edit All 模式, 無法使用 csave 按鈕（尚未測試).</p>
+<h1>每周進度</h1>
+<h2>w01</h2>
+<h3>建網站</h3>
+<p>首先先到<span>mde.tw </span>網站第一頁，點選下面連結</p>
+<p><span> <img alt="" height="281" src="/images/1.png" width="499"/></span></p>
+<p>點選此檔案，裡面老師有詳細的教學內容</p>
+<p><span> </span></p>
+<p><span> <img alt="" height="41" src="/images/2.png" width="500"/></span></p>
+<p>首先先下載隨身系統</p>
+<p><span>fall2020(</span>老師有做好的路徑及<span>pip</span>指令<span>) </span></p>
+<p><span> <img alt="" height="304" src="/images/3.png" width="500"/></span></p>
+<p>或是直接至官網下載</p>
+<p><img alt="" height="32" src="/images/4.png" width="280"/></p>
+<p>載完後解壓縮會有這四個檔案</p>
+<p><img alt="" height="134" src="/images/5.png" width="500"/></p>
+<p>確認<span>python</span>版本</p>
+<p>在<span>Y</span>槽打上<span>python</span></p>
+<p><span><img alt="" height="78" src="/images/6.png" width="500"/></span></p>
+<p>確認版本後用<span>ctrl+Z</span>跳出</p>
+<p><span> </span></p>
+<p>再確認擁有的<span>pip</span>附加檔案</p>
+<p> <img alt="" height="88" src="/images/7.png" width="500"/></p>
+<p>再到git 官網下載portable git</p>
+<p><img alt="" height="355" src="/images/8.png" width="500"/></p>
+<p>將其下載下來</p>
+<p><img alt="" height="22" src="/images/9.png" width="500"/></p>
+<p>並且解壓縮到data (自行新增一個新的資料夾)</p>
+<p> <img alt="" height="239" src="/images/10.png" width="500"/></p>
+<p> </p>
+<p>將開始的路徑做更動(將其拉的小白)</p>
+<p>打上</p>
+<p><img alt="" height="51" src="/images/11.png" width="326"/></p>
+<p>此處路徑要一樣</p>
+<p>宣告變數函數path_git的路徑為%Disk%:\portablegit\bin;</p>
+<p> </p>
+<p>再路徑下多打上%path_git%;，才能拿來當作路徑使用</p>
+<p> <img alt="" height="25" src="/images/12.png" width="384"/></p>
+<p>打完後做儲存，並重開</p>
+<p> </p>
+<p>再來設定git config (有對應的語法必須查Google找git windows</p>
+<p>例如要設定網路語法</p>
+<p><img alt="" height="34" src="/images/13.png" width="500"/></p>
+<p>因為程式碼太多所以建議多做一個txt檔，存在data\tmp下當參考資料</p>
+<p>例如:</p>
+<p><img alt="" height="73" src="/images/14.png" width="500"/></p>
+<p>再github 創建倉儲</p>
+<p><img alt="" height="484" src="/images/15.png" width="500"/></p>
+<p>就會得到三個檔案</p>
+<p><img alt="" height="95" src="/images/16.png" width="500"/></p>
+<p>將檔案clone下來</p>
+<p><img alt="" height="32" src="/images/17.png" width="500"/></p>
+<p>在tmp下就會得到</p>
+<p><img alt="" height="31" src="/images/18.png" width="500"/></p>
+<p>並且裡面有</p>
+<p> <img alt="" height="117" src="/images/19.png" width="500"/></p>
+<p>再git資料夾理會有要存版本的資料</p>
+<p>我現在希望再cad2020下的sumbugu做版本更動</p>
+<p> </p>
+<p>所以到cad2020裡輸入</p>
+<p><img alt="" height="97" src="/images/20.png" width="500"/></p>
+<p>再cad2020 下就會得到cmsimde的資料夾</p>
+<p>裡面有</p>
+<p><img alt="" height="276" src="/images/21.png" width="500"/></p>
+<p>將up_dir的東西全部複製並貼到外面的cad2020裡</p>
+<p><img alt="" height="381" src="/images/22.png" width="500"/></p>
+<p>取代up_dir資料夾裡的東西有.gitignore，LICENSE</p>
+<p> </p>
+<p>在小黑下載啟動模組</p>
+<p>pip install flask flask_cors lxml bs4 markdown pelican leo </p>
+<p> </p>
+<p> </p>
+<p>補充:載完後解釋:leo</p>
+<p><img alt="" height="151" src="/images/23.png" width="500"/></p>
+<p>此處為leo設定的地方</p>
+<p> </p>
+<p>之後即可開啟動態</p>
+<p><img alt="" height="141" src="/images/24.png" width="500"/></p>
+<p>打上python wsgi.py</p>
+<p>再google打上<span><a href="http://localhost:9443/">http://localhost:9443/</a></span></p>
+<p>或是https://127.0.0.1:9443/</p>
+<p><img alt="" height="281" src="/images/25.png" width="500"/></p>
+<p>即可登入 <span>(</span>密碼為admin</p>
+<p>得網站</p>
+<p><img alt="" height="411" src="/images/27.png" width="500"/></p>
+<p>在home中會要做一個.gitconfig</p>
+<p>讓電腦知道要用哪知帳號</p>
+<p> </p>
+<p>如果引擎壞掉如cmsimde網站無法開啟</p>
+<p> <img alt="" height="176" src="/images/28.png" width="500"/></p>
+<p>打上git clone –recourse-submodule (“URL”)</p>
+<p>URL=https://github.com/40823131/cad2020</p>
+<p>Or</p>
+<p><img alt="" height="244" src="/images/29.png" width="500"/></p>
+<p> </p>
+<p>如果網址為[::]:9443</p>
+<p><img alt="" height="281" src="/images/30.png" width="500"/></p>
+<p>到init.py改網址</p>
+<h2>w02</h2>
+<h2>w03</h2>
+<h2>w04</h2>
+<h2>w05</h2>
+<h2>w06</h2>
+<h2>w07</h2>
+<h2>w08</h2>
+<h2>w09</h2>
+<h2>w10</h2>
+<h2>w11</h2>
+<h2>w12</h2>
+<h2>w13</h2>
+<h2>w14</h2>
+<h2>w15</h2>
+<h2>w16</h2>
+<h2>w17</h2>
+<h2>w18</h2>
+<p></p>
