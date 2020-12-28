@@ -135,17 +135,20 @@
 <p><img alt="" height="108" src="/images/ssh 9.png" width="479"/></p>
 <p>(4)</p>
 <p>在github 的settings中找到SSH and GPD keys</p>
-<p></p>
+<p><img alt="" height="303" src="/images/ssh 10.png" width="500"/></p>
 <p>新增鑰使</p>
 <p>將id_rsa.pub的內容</p>
+<p><img alt="" height="525" src="/images/ssh 11.png" width="417"/></p>
 <p>複製到</p>
+<p><img alt="" height="242" src="/images/ssh 12.png" width="500"/></p>
 <p>並且創建一把鑰使</p>
 <p>(5)</p>
 <p>修改啟動的 start.bat 加入下列設定</p>
 <p>set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<p><img alt="" height="55" src="/images/ssh 13.png" width="339"/></p>
 <p>(6)</p>
 <p>home 下的 .ssh 目錄中多新增 config 並且內容如下</p>
-<p> </p>
+<p> <img alt="" height="277" src="/images/ssh 14.png" width="500"/></p>
 <p># no proxy at home</p>
 <p>#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p</p>
 <p># set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup</p>
@@ -166,20 +169,24 @@
 <p>    IdentitiesOnly yes</p>
 <p>(7)</p>
 <p>cad2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線</p>
-<p> </p>
+<p> <img alt="" height="439" src="/images/ssh 15.png" width="500"/></p>
 <p> </p>
 <p> </p>
 <p>(8)</p>
+<p><img alt="" height="303" src="/images/ssh 16.png" width="500"/></p>
 <p>點擊putty.exe</p>
 <p>設定代理主機</p>
+<p><img alt="" height="454" src="/images/ssh 17.png" width="500"/></p>
 <p>建一個github.com並且save</p>
 <p> </p>
 <p>點擊proxy並設定</p>
 <p>設定代理主機(Proxy) (除非是IPV4 IPV6才要設定)</p>
-<p> </p>
+<p><img alt="" height="452" src="/images/ssh 18.png" width="500"/></p>
 <p>設定Auth</p>
 <p>設定SSH的 ppk private key (之前轉的APK)</p>
-<p>並且按下open後，就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push</p><h2>w04</h2>
+<p><img alt="" height="450" src="/images/ssh 19.png" width="500"/></p>
+<p>並且按下open後，就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push</p>
+<h2>w04</h2>
 <h2>w05</h2>
 <h2>w06</h2>
 <h2>w07</h2>
@@ -194,4 +201,5 @@
 <h2>w16</h2>
 <h2>w17</h2>
 <h2>w18</h2>
+<h1>小組會議</h1>
 <p></p>
