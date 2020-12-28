@@ -135,7 +135,88 @@ img.add_border {
         </header>
     <div id="tipue_search_content">w02 << <a href='w02.html'>Previous</a> <a href='w04.html'>Next</a> >> w04<br /><h1>w03</h1>
 <p>ssh製做</p>
-<br />w02 << <a href='w02.html'>Previous</a> <a href='w04.html'>Next</a> >> w04</div>
+<p>首先將小黑編輯器打開並寫打上:</p>
+<p><img alt="" height="149" src="./../images/ssh 1.png" width="500"/></p>
+<p>打上 </p>
+<p>ssh-keygen -t rsa -b 4096 -C "使用者學號"</p>
+<p><img alt="" height="308" src="./../images/ssh 2.png" width="500"/></p>
+<p>第二行為鑰使儲存位置</p>
+<p>下一行為輸入密碼</p>
+<p>再次輸入密碼</p>
+<p>即可獲得要鑰使</p>
+<p>在鑰使儲存位置會找到兩個檔案(上為private key 下為 public key)</p>
+<p><img alt="" height="46" src="./../images/ssh 3.png" width="500"/></p>
+<p>(3)</p>
+<p>下載putty工具</p>
+<p>會有以下檔案</p>
+<p><img alt="" height="303" src="./../images/ssh 4.png" width="500"/></p>
+<p>利用puttygen.exe</p>
+<p><img alt="" height="31" src="./../images/ssh 5.png" width="130"/></p>
+<p>打開後會發現下圖視窗</p>
+<p><img alt="" height="452" src="./../images/ssh 6.png" width="500"/></p>
+<p>按下load</p>
+<p>將剛才的鑰使開啟</p>
+<p>將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式</p>
+<p> 選擇所使用的鑰使</p>
+<p><img alt="" height="390" src="./../images/ssh 7.png" width="500"/></p>
+<p>得下圖</p>
+<p> <img alt="" height="452" src="./../images/ssh 8.png" width="500"/></p>
+<p> </p>
+<p>以私人的形式儲存鑰使</p>
+<p><img alt="" height="108" src="./../images/ssh 9.png" width="479"/></p>
+<p>(4)</p>
+<p>在github 的settings中找到SSH and GPD keys</p>
+<p><img alt="" height="303" src="./../images/ssh 10.png" width="500"/></p>
+<p>新增鑰使</p>
+<p>將id_rsa.pub的內容</p>
+<p><img alt="" height="525" src="./../images/ssh 11.png" width="417"/></p>
+<p>複製到</p>
+<p><img alt="" height="242" src="./../images/ssh 12.png" width="500"/></p>
+<p>並且創建一把鑰使</p>
+<p>(5)</p>
+<p>修改啟動的 start.bat 加入下列設定</p>
+<p>set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<p><img alt="" height="55" src="./../images/ssh 13.png" width="339"/></p>
+<p>(6)</p>
+<p>home 下的 .ssh 目錄中多新增 config 並且內容如下</p>
+<p> <img alt="" height="277" src="./../images/ssh 14.png" width="500"/></p>
+<p># no proxy at home</p>
+<p>#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p</p>
+<p># set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup</p>
+<p>ProxyCommand y:/putty/plink.exe github.com %h %p</p>
+<p>   </p>
+<p>Host github.com</p>
+<p>    User git</p>
+<p>    Port 22</p>
+<p>    Hostname github.com</p>
+<p>      </p>
+<p>    # for connect.exe need openssh key format</p>
+<p>    #IdentityFile "y:\home\.ssh\id_rsa_mdecourse"</p>
+<p>    # for plink.exe need rsa key format but set under putty github.com session</p>
+<p>    # plink.exe do not need the following setting</p>
+<p>    #IdentityFile "y:\home\.ssh\mdecourse_putty_private.ppk"</p>
+<p>   </p>
+<p>    TCPKeepAlive yes</p>
+<p>    IdentitiesOnly yes</p>
+<p>(7)</p>
+<p>cad2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線</p>
+<p> <img alt="" height="439" src="./../images/ssh 15.png" width="500"/></p>
+<p> </p>
+<p> </p>
+<p>(8)</p>
+<p><img alt="" height="303" src="./../images/ssh 16.png" width="500"/></p>
+<p>點擊putty.exe</p>
+<p>設定代理主機</p>
+<p><img alt="" height="454" src="./../images/ssh 17.png" width="500"/></p>
+<p>建一個github.com並且save</p>
+<p> </p>
+<p>點擊proxy並設定</p>
+<p>設定代理主機(Proxy) (除非是IPV4 IPV6才要設定)</p>
+<p><img alt="" height="452" src="./../images/ssh 18.png" width="500"/></p>
+<p>設定Auth</p>
+<p>設定SSH的 ppk private key (之前轉的APK)</p>
+<p><img alt="" height="450" src="./../images/ssh 19.png" width="500"/></p>
+<p>並且按下open後，就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push</p><br />w02 << <a href='w02.html'>Previous</a> <a href='w04.html'>Next</a> >> w04</div>
         
     <!-- footer -->
       <div class="container">
