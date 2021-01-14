@@ -133,12 +133,96 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='發展.html'>Next</a> >> 發展<br /><h1>簡介</h1>
-<p><a href="https://40871106.github.io/cad2020/">Cad2020倉儲</a></p>
+    <div id="tipue_search_content">眨眼3 << <a href='眨眼3.html'>Previous</a> <a href='W5.html'>Next</a> >> W5<br /><h1>製作SSH</h1>
+<p><span></span><span>首先將小黑編輯器打開並寫打上：</span></p>
+<p><img alt="" height="206" src="./../images/a.png" width="690"/></p>
+<p><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">打上 </span></span></span></p>
+<p><span><span>ssh-keygen -t rsa -b 4096 -C“使用者學號”</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="441" src="./../images/b.png" width="715"/></span></span></p>
+<p><span>第二行為按鍵使儲存位置</span></p>
+<p><span><span>下一行為輸入密碼</span></span></p>
+<p><span><span>再次輸入密碼</span></span></p>
+<p><span><span>即可獲得要鑰使</span></span></p>
+<p><span><span>在鑰使儲存位置會找到兩個檔案（上為私有密鑰下為公共密鑰）</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="47" src="./../images/c.png" width="511"/></span></span></p>
+<p><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（3）</span></span></span></p>
+<p><span><span>下載putty工具</span></span></p>
+<p><span><span>會有以下檔案</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="587" src="./../images/d.png" width="968"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">利用puttygen.exe</span></span></span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="31" src="./../images/e.png" width="130"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>：後會發現下圖視窗</span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="579" src="./../images/f.png" width="641"/></span></span></p>
+<p><span>點擊負荷</span></p>
+<p><span><span>將剛才的鑰使開啟</span></span></p>
+<p><span><span>將id_rsa轉為Putty可以解讀的.ppk格式</span></span></p>
+<p><span><span> 選擇所使用的按鍵使</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="579" src="./../images/h.png" width="641"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>得下圖</span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="108" src="./../images/i.png" width="479"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>以私人的形式儲存關鍵字使</span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="929" src="./../images/j.png" width="1535"/></span></span></p>
+<p><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（4）</span></span></span></p>
+<p><span><span>在github的settings中找到SSH和GPD密鑰</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="525" src="./../images/k.png" width="417"/></span></span></p>
+<p><span>新增按鍵使</span></p>
+<p><span><span>將id_rsa.pub的內容</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="455" src="./../images/l.png" width="939"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>複製到</span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="55" src="./../images/n.png" width="339"/></span></span></p>
+<p><span>並且創造一把鑰匙使</span></p>
+<p><span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（5）</span></span></span></span></p>
+<p><span><span>修改啟動的start.bat加入以下設置</span></span></p>
+<p><span><span>設置GIT_SSH =％Disk％：\ putty \ plink.exe</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="471" src="./../images/o.png" width="851"/></span></span></p>
+<p><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（6）</span></span></span></p>
+<p><span><span>home下一個.ssh目錄中多添加config和內容如下</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="447" src="./../images/p.png" width="509"/></span></span></p>
+<p><span>＃在家中沒有代理</span></p>
+<p><span><span>#ProxyCommand y：/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128％h％p</span></span></p>
+<p><span><span>＃在膩子github.com會話設置下使用auth設置git_ssh = y：/putty/plink.exe</span></span></p>
+<p><span><span>ProxyCommand y：/putty/plink.exe github.com％h％p</span></span></p>
+<p>   </p>
+<p><span><span>託管github.com</span></span></p>
+<p><span><span>    用戶git</span></span></p>
+<p><span><span>    港口22</span></span></p>
+<p><span><span>    主機名github.com</span></span></p>
+<p>      </p>
+<p><span><span>    ＃用於connect.exe需要openssh密鑰格式</span></span></p>
+<p><span><span>    #IdentityFile“ y：\ home \ .ssh \ id_rsa_mdecourse”</span></span></p>
+<p><span><span>    ＃for plink.exe需要rsa密鑰格式，但在putty github.com會話下設置</span></span></p>
+<p><span><span>    ＃plink.exe不需要以下設置</span></span></p>
+<p><span><span>    #IdentityFile“ y：\ home \ .ssh \ mdecourse_putty_private.ppk”</span></span></p>
+<p>   </p>
+<p><span><span>    TCPKeepAlive是</span></span></p>
+<p><span><span>    身份只有</span></span></p>
+<p><span><span>（7）</span></span></p>
+<p><span><span>cad2020倉儲中.git目錄下的config檔案中的連線協定，由https轉換採ssh連線</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="587" src="./../images/q.png" width="968"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>（8）</span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="547" src="./../images/r.png" width="603"/></span></span></p>
+<p><span>點擊putty.exe</span></p>
+<p><span><span>設定代理主機</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="543" src="./../images/s.png" width="601"/></span></span></p>
+<p><span>建一個github.com和保存</span></p>
+<p> </p>
+<p><span><span>點擊代理並設置</span></span></p>
+<p><span><span>設定代理主機（Proxy）（除非是IPV4 IPV6才要設定）</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="543" src="./../images/s.png" width="601"/></span></span></p>
+<p><span>設定Auth</span></p>
+<p><span><span>設定SSH的ppk私鑰（之前轉的APK）</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><img caption="false" height="541" src="./../images/t.png" width="601"/></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>並且點擊open後，就可以透過近端的.ppk私鑰與Github.com上的公鑰對應，無需輸入帳號密碼就可以進行git push</span></span></span></p>
 <p></p>
-<p><img alt="" height="277" src="./../images/vespa.jpg" width="370"/></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">40871106 .</span></span></span></span></span></span></p>
-<br /> <a href='發展.html'>Next</a> >> 發展</div>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
+<br />眨眼3 << <a href='眨眼3.html'>Previous</a> <a href='W5.html'>Next</a> >> W5</div>
         
     <!-- footer -->
       <div class="container">
